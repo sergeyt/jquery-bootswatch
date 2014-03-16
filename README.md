@@ -11,3 +11,20 @@ jQuery bootswatch theme selector.
 [![NPM version](https://badge.fury.io/js/jquery-bootswatch.png)](http://badge.fury.io/js/jquery-bootswatch)
 
 [![NPM](https://nodei.co/npm/jquery-bootswatch.png?downloads=true&stars=true)](https://nodei.co/npm/jquery-bootswatch/)
+
+## Usage Example
+
+'''html
+<div class="btn-group">
+	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+		Themes <span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu themes" role="menu">
+		<li><a href="#">Default</a></li>
+	</ul>
+</div>
+'''
+
+'''javascript
+$('.themes').bootswatch();
+'''
