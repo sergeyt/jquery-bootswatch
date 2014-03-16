@@ -3,6 +3,6 @@
   "description": "jQuery bootswatch theme selector.",
   "homepage": "https://github.com/sergeyt/jquery-bootswatch",
   "author": "Sergey Todyshev",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "git": "https://github.com/sergeyt/jquery-bootswatch.git"
 }
