@@ -14,7 +14,7 @@ jQuery bootswatch theme selector.
 
 ## Usage Example
 
-'''html
+```html
 <div class="btn-group">
 	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
 		Themes <span class="caret"></span>
@@ -23,8 +23,8 @@ jQuery bootswatch theme selector.
 		<li><a href="#">Default</a></li>
 	</ul>
 </div>
-'''
+```
 
-'''javascript
+```javascript
 $('.themes').bootswatch();
-'''
+```
