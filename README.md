@@ -9,6 +9,7 @@
 jQuery bootswatch theme selector.
 
 [![NPM version](https://badge.fury.io/js/jquery-bootswatch.png)](http://badge.fury.io/js/jquery-bootswatch)
+[![Bower version](https://badge.fury.io/bo/jquery-bootswatch.png)](http://badge.fury.io/bo/jquery-bootswatch)
 
 [![NPM](https://nodei.co/npm/jquery-bootswatch.png?downloads=true&stars=true)](https://nodei.co/npm/jquery-bootswatch/)
 
