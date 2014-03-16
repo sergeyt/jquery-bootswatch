@@ -1,0 +1,8 @@
+{
+  "name": "jquery-bootswatch",
+  "description": "jQuery bootswatch theme selector.",
+  "homepage": "https://github.com/sergeyt/jquery-bootswatch",
+  "author": "Sergey Todyshev",
+  "version": "0.0.0",
+  "git": "https://github.com/sergeyt/jquery-bootswatch.git"
+}

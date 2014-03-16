@@ -1,4 +1,3 @@
-jquery-bootswatch
-=================
+# jquery-bootswatch
 
-Simple selector of bootswatch themes
+jQuery bootswatch theme selector.

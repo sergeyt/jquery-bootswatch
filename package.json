@@ -1,0 +1,43 @@
+{
+  "name": "jquery-bootswatch",
+  "version": "0.0.0",
+  "description": "jQuery bootswatch theme selector.",
+  "license": "MIT",
+  "main": "jquery-bootswatch.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:sergeyt/jquery-bootswatch.git"
+  },
+  "keywords": [
+    "jquery",
+    "jquery-plugin",
+    "bootswatch",
+    "bootstrap"
+  ],
+  "author": "Sergey Todyshev <stodyshev@gmail.com>",
+  "contributors": [
+    "Sergey Todyshev <stodyshev@gmail.com>"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-jshint": "~0.7.1",
+    "grunt-npm": "~0.0.2",
+    "grunt-bump": "~0.0.7",
+    "grunt-auto-release": "~0.0.2",
+    "grunt-cli": "~0.1.11",
+    "karma-chrome-launcher": "~0.1.1",
+    "karma-jasmine": "~0.1.4",
+    "karma-coffee-preprocessor": "~0.1.1",
+    "karma-phantomjs-launcher": "~0.1.1",
+    "karma": "~0.10.8",
+    "karma-coverage": "0.1.0",
+    "karma-mocha": "~0.1.1",
+    "expect.js": "~0.2.0",
+    "grunt-karma": "~0.6.2"
+  },
+  "scripts": {
+    "lint": "grunt lint",
+    "test": "grunt test"
+  }
+}
