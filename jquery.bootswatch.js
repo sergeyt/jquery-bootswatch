@@ -21,6 +21,7 @@
 			var theme = $(this).data('theme');
 			$('link[data-theme]').attr('disabled', 'disabled');
 			$('link[data-theme=' + theme + ']').removeAttr('disabled');
+			$this.trigger('theme-changed', theme);
 		});
 
 		return this;
