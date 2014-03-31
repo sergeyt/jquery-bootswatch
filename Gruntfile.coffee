@@ -27,9 +27,7 @@ module.exports = (grunt) ->
 					module: true,
 					require: true
 			all:
-				options:
-					ignores: ['*.min.js', 'src/*.min.js']
-				src: ['*.js', 'src/*.js']
+				src: ['*.js', 'meteor-demo/*.js']
 
 		karma:
 			unit:
