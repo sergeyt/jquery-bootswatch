@@ -20,7 +20,7 @@ module.exports = function(config) {
 		// list of files / patterns to load in the browser
 		files: [
 			'lib/jquery/dist/jquery.js',
-			'node_modules/expect.js/expect.js',
+			'node_modules/expect.js/index.js',
 			'jquery.bootswatch.js',
 			'test/*.coffee'
 		],
