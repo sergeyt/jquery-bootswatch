@@ -12,6 +12,9 @@
 		var item_template = '<li><a href="#" data-theme="$name"><span>$label</span>&nbsp;<span class="glyphicon"></span></a></li>';
 		var selected_icon = 'glyphicon-ok';
 
+		// insert default theme
+		$(link_template.replace(/\$name/g, 'default')).appendTo($('head'));
+
 		// insert theme menu items
 		themes.forEach(function(name) {
 			var label = name.substr(0, 1).toUpperCase() + name.substr(1);
