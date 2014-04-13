@@ -7,7 +7,7 @@
     "email": "stodyshev@gmail.com"
   }],
   "dependencies": {
-    "jquery": "*"
+    "jquery": ">=1.11"
   },
   "ignore": [
     "**/.*",
