@@ -13,19 +13,21 @@
 	// ===========================
 
 	var Bootswatch = function (element, options) {
-		var $this = this;
+		var self = this;
 		this.$element = $(element);
 		this.options = $.extend({}, Bootswatch.DEFAULTS, this.$element.data(), options);
 
-		this.$link = $("<link>").attr('rel', 'stylesheet').attr('id', this.options.selector);
-		$('head').append(this.$link);
+		this.$link = $('#' + this.options.selector);
+		if (!this.$link.length) {
+			this.$link = $('<link rel="stylesheet"/>').attr('id', this.options.selector).appendTo('head');
+		}
 
 		$.each(Bootswatch.THEMES, function (name) {
 			var label = name.substr(0, 1).toUpperCase() + name.substr(1);
-			var html = $this.options.roller
+			var html = self.options.roller
 				.replace(/\$name/g, name)
 				.replace(/\$label/g, label);
-			$(html).appendTo($this.$element);
+			$(html).appendTo(self.$element);
 		});
 
 		if (this.options.default) {
@@ -34,8 +36,7 @@
 
 		this.$element.find('a').click(function () {
 			var theme = $(this).data('theme');
-
-			$this.change(theme);
+			self.change(theme);
 		});
 	};
 

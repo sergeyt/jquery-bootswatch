@@ -35,18 +35,18 @@ describe 'bootswatch', ->
 		it 'should have first item with selected icon', ->
 			$('a[data-theme=default] .glyphicon-ok').length.should.eql(1)
 
-		xit 'should change theme on menu item click', (done) ->
+		it 'should change theme on menu item click', (done) ->
 			item = $('a[data-theme=amelia]')
 			item.length.should.eql(1)
-			item.on 'theme-changed', ->
+			$('.themes').on 'theme-changed', ->
 				$('#bootswatch').attr('href').should.eql('http://netdna.bootstrapcdn.com/bootswatch/3.1.1/amelia/bootstrap.min.css')
 				done()
 			item.simulateClick()
 
-		xit 'should change icon of menu item', (done) ->
+		it 'should change icon of menu item', (done) ->
 			item = $('a[data-theme=amelia]')
 			item.length.should.eql(1)
-			item.on 'theme-changed', ->
+			$('.themes').on 'theme-changed', ->
 				$('a[data-theme=default] .glyphicon-ok').length.should.eql(0)
 				$('a[data-theme=amelia] .glyphicon-ok').length.should.eql(1)
 				done()
