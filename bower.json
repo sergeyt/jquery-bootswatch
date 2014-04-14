@@ -1,6 +1,6 @@
 {
   "name": "jquery-bootswatch",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "main": "jquery.bootswatch.js",
   "maintainers": [{
     "name": "Sergey Todyshev",

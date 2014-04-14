@@ -1,5 +1,5 @@
 /* ========================================================================
- * jquery.bootswatch.js v0.0.6
+ * jquery.bootswatch.js v0.0.7
  * https://github.com/sergeyt/jquery-bootswatch
  * ========================================================================
  * Copyright 2014 Sergey Todyshev
