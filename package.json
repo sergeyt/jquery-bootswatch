@@ -1,6 +1,6 @@
 {
   "name": "jquery-bootswatch",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "jQuery bootswatch theme selector.",
   "license": "MIT",
   "main": "jquery-bootswatch.js",
