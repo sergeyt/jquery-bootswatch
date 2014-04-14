@@ -1,0 +1,27 @@
+<head>
+	<title>jquery-bootswatch demo</title>
+	<script src="../lib/jquery/dist/jquery.js"></script>
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	<script src="../jquery.bootswatch.js"></script>
+	<script>
+		$(function(){
+			$('.themes').bootswatch();
+		});
+	</script>
+</head>
+
+<body>
+<div>
+	<div class="toolbar">
+		<div class="btn-group">
+			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+				Themes <span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu themes" role="menu"></ul>
+		</div>
+	</div>
+</div>
+<div>
+	<p>TODO: add some content</p>
+</div>
+</body>

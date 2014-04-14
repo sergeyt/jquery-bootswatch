@@ -20,9 +20,7 @@ jQuery bootswatch theme selector.
 	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
 		Themes <span class="caret"></span>
 	</button>
-	<ul class="dropdown-menu themes" role="menu">
-		<li><a href="#">Default</a></li>
-	</ul>
+	<ul class="dropdown-menu themes" role="menu"></ul>
 </div>
 ```
 
