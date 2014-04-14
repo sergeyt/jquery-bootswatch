@@ -16,7 +16,8 @@
   ],
   "author": "Sergey Todyshev <stodyshev@gmail.com>",
   "contributors": [
-    "Sergey Todyshev <stodyshev@gmail.com>"
+    "Sergey Todyshev <stodyshev@gmail.com>",
+    "Márk Sági-Kazár <mark.sagikazar@gmail.com>"
   ],
   "dependencies": {},
   "devDependencies": {
