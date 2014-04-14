@@ -14,37 +14,37 @@
 
   var Bootswatch = function (element, options) {
     var $this = this;
-    this.$element = $(element)
-    this.options  = $.extend({}, Bootswatch.DEFAULTS, this.$element.data(), options)
+    this.$element = $(element);
+    this.options  = $.extend({}, Bootswatch.DEFAULTS, this.$element.data(), options);
 
-    this.$link = $("<link>").attr('rel', 'stylesheet').attr('id', this.options.selector)
-    $('head').append(this.$link)
+    this.$link = $("<link>").attr('rel', 'stylesheet').attr('id', this.options.selector);
+    $('head').append(this.$link);
 
     if (this.options.default !== false) {
-      this.change(this.options.default)
+      this.change(this.options.default);
     }
 
     $.each(Bootswatch.THEMES, function(name, href) {
-        var label = name.substr(0, 1).toUpperCase() + name.substr(1)
+        var label = name.substr(0, 1).toUpperCase() + name.substr(1);
         var html = $this.options.roller
           .replace(/\$name/g, name)
-          .replace(/\$label/g, label)
-        $(html).appendTo($this.$element)
-    })
+          .replace(/\$label/g, label);
+        $(html).appendTo($this.$element);
+    });
 
     this.$element.find('a').click(function() {
-      var theme = $(this).data('theme')
+      var theme = $(this).data('theme');
 
-      $this.change(theme)
+      $this.change(theme);
     });
-  }
+  };
 
   Bootswatch.DEFAULTS = {
     default: 'default',
     selector: 'bootswatch',
     roller: '<li><a href="#" data-theme="$name"><span>$label</span>&nbsp;<span class="glyphicon"></span></a></li>',
     icon: 'glyphicon-ok'
-  }
+  };
 
   Bootswatch.THEMES = {
     default: '//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css',
@@ -62,49 +62,56 @@
     superhero: '//netdna.bootstrapcdn.com/bootswatch/3.1.1/superhero/bootstrap.min.css',
     united: '//netdna.bootstrapcdn.com/bootswatch/3.1.1/united/bootstrap.min.css',
     yeti: '//netdna.bootstrapcdn.com/bootswatch/3.1.1/yeti/bootstrap.min.css'
-  }
+  };
 
   Bootswatch.prototype.change = function(theme) {
-    this.$link.attr('href', Bootswatch.THEMES[theme])
+    this.$link.attr('href', Bootswatch.THEMES[theme]);
 
     // toggle icon
     this.$element.find('a[data-theme] .' + this.options.icon).removeClass(this.options.icon);
     this.$element.find('a[data-theme=' + theme + '] .glyphicon').addClass(this.options.icon);
 
     this.$element.trigger('theme-changed', theme);
-  }
+  };
 
   Bootswatch.prototype.setOptions = function(options) {
-    if (typeof options == 'object') this.options = $.extend({}, this.options, options)
-  }
+    if (typeof options == 'object') {
+		this.options = $.extend({}, this.options, options);
+	}
+  };
 
   // BOOTSWATCH PLUGIN DEFINITION
   // =========================
 
-  var old = $.fn.bootswatch
+  var old = $.fn.bootswatch;
 
   $.fn.bootswatch = function (option, arg) {
     return this.each(function () {
-      var $this   = $(this)
-      var data    = $this.data('bs.bootswatch')
-      var isNew   = (typeof data == 'object')
-      var options = typeof option == 'object' && option
+      var $this = $(this);
+      var data = $this.data('bs.bootswatch');
+      var isNew = (typeof data == 'object');
+      var options = typeof option == 'object' && option;
 
-      if (!data) $this.data('bs.bootswatch', (data = new Bootswatch(this, options)))
+      if (!data) {
+		  $this.data('bs.bootswatch', (data = new Bootswatch(this, options)));
+	  }
 
-      if (typeof option == 'object' && isNew == false) data.setOptions(option)
-      else if (typeof option == 'string') data[option](arg)
-    })
-  }
+      if (typeof option == 'object' && isNew === false) {
+		  data.setOptions(option);
+	  } else if (typeof option == 'string') {
+		  data[option](arg);
+	  }
+    });
+  };
 
-  $.fn.bootswatch.Constructor = Bootswatch
+  $.fn.bootswatch.Constructor = Bootswatch;
 
   // BOOTSWATCH NO CONFLICT
   // ======================
 
   $.fn.bootswatch.noConflict = function () {
-    $.fn.bootswatch = old
-    return this
-  }
+    $.fn.bootswatch = old;
+    return this;
+  };
 
 }(jQuery);
