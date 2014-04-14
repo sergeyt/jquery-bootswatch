@@ -20,17 +20,17 @@
 		this.$link = $("<link>").attr('rel', 'stylesheet').attr('id', this.options.selector);
 		$('head').append(this.$link);
 
-		if (this.options.default !== false) {
-			this.change(this.options.default);
-		}
-
-		$.each(Bootswatch.THEMES, function (name, href) {
+		$.each(Bootswatch.THEMES, function (name) {
 			var label = name.substr(0, 1).toUpperCase() + name.substr(1);
 			var html = $this.options.roller
 				.replace(/\$name/g, name)
 				.replace(/\$label/g, label);
 			$(html).appendTo($this.$element);
 		});
+
+		if (this.options.default) {
+			this.change(this.options.default);
+		}
 
 		this.$element.find('a').click(function () {
 			var theme = $(this).data('theme');
@@ -90,7 +90,8 @@
 			var options = typeof option == 'object' && option;
 
 			if (!data) {
-				$this.data('bs.bootswatch', (data = new Bootswatch(this, options)));
+				data = new Bootswatch(this, options);
+				$this.data('bs.bootswatch', data);
 			}
 
 			if (typeof option == 'object' && isNew === false) {
