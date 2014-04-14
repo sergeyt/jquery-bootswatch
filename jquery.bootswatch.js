@@ -17,12 +17,14 @@
 		this.$element = $(element);
 		this.options = $.extend({}, Bootswatch.DEFAULTS, this.$element.data(), options);
 
+		// insert link element
 		this.$link = $('#' + this.options.selector);
 		if (!this.$link.length) {
 			this.$link = $('<link rel="stylesheet"/>').attr('id', this.options.selector).appendTo('head');
 		}
 
-		$.each(Bootswatch.THEMES, function (name) {
+		// insert menu items
+		$.each(this.options.themes, function (name) {
 			var label = name.substr(0, 1).toUpperCase() + name.substr(1);
 			var html = self.options.roller
 				.replace(/\$name/g, name)
@@ -30,6 +32,7 @@
 			$(html).appendTo(self.$element);
 		});
 
+		// set default theme
 		if (this.options.default) {
 			this.change(this.options.default);
 		}
@@ -40,30 +43,38 @@
 		});
 	};
 
+	function theme_url(name) {
+		return 'http://netdna.bootstrapcdn.com/bootswatch/3.1.1/$name/bootstrap.min.css'.replace(/\$name/g, name);
+	}
+
+	var themes = {
+		default: 'http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css',
+		amelia: theme_url('amelia'),
+		cerulean: theme_url('cerulean'),
+		cosmo: theme_url('cosmo'),
+		cyborg: theme_url('cyborg'),
+		flatly: theme_url('flatly'),
+		journal: theme_url('journal'),
+		lumen: theme_url('lumen'),
+		readable: theme_url('readable'),
+		simplex: theme_url('simplex'),
+		slate: theme_url('slate'),
+		spacelab: theme_url('spacelab'),
+		superhero: theme_url('superhero'),
+		united: theme_url('united'),
+		yeti: theme_url('yeti')
+	};
+
 	Bootswatch.DEFAULTS = {
 		default: 'default',
+		themes: themes,
 		selector: 'bootswatch',
 		roller: '<li><a href="#" data-theme="$name"><span>$label</span>&nbsp;<span class="glyphicon"></span></a></li>',
 		icon: 'glyphicon-ok'
 	};
 
-	function theme_url(name) {
-		return 'http://netdna.bootstrapcdn.com/bootswatch/3.1.1/$name/bootstrap.min.css'.replace(/\$name/g, name);
-	}
-
-	var themes = 'amelia,cerulean,cosmo,cyborg,flatly,journal,lumen,readable,simplex,slate,spacelab,superhero,united,yeti'
-		.split(',')
-		.map(function(name){
-			var obj = {};
-			obj[name] = theme_url(name);
-			return obj;
-		});
-	var default_theme = {default: 'http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css'};
-
-	Bootswatch.THEMES = $.extend.apply($, [default_theme].concat(themes));
-
 	Bootswatch.prototype.change = function (theme) {
-		this.$link.attr('href', Bootswatch.THEMES[theme]);
+		this.$link.attr('href', this.options.themes[theme]);
 
 		// toggle icon
 		this.$element.find('a[data-theme] .' + this.options.icon).removeClass(this.options.icon);

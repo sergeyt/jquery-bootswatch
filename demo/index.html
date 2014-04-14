@@ -6,6 +6,13 @@
 	<script>
 		$(function(){
 			$('.themes').bootswatch();
+			$('.custom-themes').bootswatch({
+				default: 'amelia',
+				themes: {
+					amelia: 'http://netdna.bootstrapcdn.com/bootswatch/3.0.0/amelia/bootstrap.min.css',
+					cosmo: 'http://netdna.bootstrapcdn.com/bootswatch/3.0.0/cosmo/bootstrap.min.css'
+				}
+			});
 		});
 	</script>
 </head>
@@ -18,6 +25,12 @@
 				Themes <span class="caret"></span>
 			</button>
 			<ul class="dropdown-menu themes" role="menu"></ul>
+		</div>
+		<div class="btn-group">
+			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+				Custom themes <span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu custom-themes" role="menu"></ul>
 		</div>
 	</div>
 </div>
