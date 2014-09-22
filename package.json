@@ -34,7 +34,7 @@
     "karma": "~0.12",
     "karma-coverage": "~0.2",
     "karma-mocha": "~0.1",
-    "grunt-karma": "~0.8",
+    "grunt-karma": "~0.9",
     "should": "~4.0"
   },
   "scripts": {
