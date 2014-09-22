@@ -6,7 +6,7 @@
         "git": "https://github.com/sergeyt/meteor-user-session",
         "branch": "master"
       },
-      "jquery-bootswatch": {
+      "sergeyt:jquery-bootswatch": {
         "path": ".."
       }
     },
@@ -16,7 +16,7 @@
         "branch": "master",
         "commit": "f83f9a7d6d64121289ce47c9739d6c871fb8bec8"
       },
-      "jquery-bootswatch": {
+      "sergeyt:jquery-bootswatch": {
         "path": ".."
       }
     }

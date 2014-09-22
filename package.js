@@ -1,12 +1,15 @@
 Package.describe({
-	summary: "jQuery bootswatch theme selector."
+	name: "sergeyt:jquery-bootswatch",
+	summary: "jQuery bootswatch theme selector.",
+	git: "https://github.com/sergeyt/jquery-bootswatch",
+	version: "0.0.8"
 });
 
-Package.on_use(function(api) {
+Package.onUse(function(api) {
 	var client = ['client'];
-
+	api.versionsFrom('METEOR@0.9.1');
 	api.use('jquery', client);
-
-	api.add_files('jquery.bootswatch.js', client);
-	api.add_files('meteor.bootswatch.js', client);
+	api.addFiles('jquery.bootswatch.js', client);
+	api.addFiles('meteor.bootswatch.js', client);
 });
+
