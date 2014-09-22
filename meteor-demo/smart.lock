@@ -1,0 +1,24 @@
+{
+  "meteor": {},
+  "dependencies": {
+    "basePackages": {
+      "user-session": {
+        "git": "https://github.com/sergeyt/meteor-user-session",
+        "branch": "master"
+      },
+      "jquery-bootswatch": {
+        "path": ".."
+      }
+    },
+    "packages": {
+      "user-session": {
+        "git": "https://github.com/sergeyt/meteor-user-session",
+        "branch": "master",
+        "commit": "f83f9a7d6d64121289ce47c9739d6c871fb8bec8"
+      },
+      "jquery-bootswatch": {
+        "path": ".."
+      }
+    }
+  }
+}

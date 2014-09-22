@@ -1,14 +1,10 @@
 {
-  "packages":
-  {
-	  "bootstrap-3": {},
-	  "user-session":
-	  {
-		  "git": "https://github.com/sergeyt/meteor-user-session"
-	  },
-	  "jquery-bootswatch":
-	  {
-		  "path": ".."
-	  }
+  "packages": {
+    "user-session": {
+      "git": "https://github.com/sergeyt/meteor-user-session"
+    },
+    "jquery-bootswatch": {
+      "path": ".."
+    }
   }
 }

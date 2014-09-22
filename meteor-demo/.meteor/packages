@@ -6,7 +6,7 @@
 standard-app-packages
 insecure
 jquery
-bootstrap-3
+mizzao:bootstrap-3
 user-session
 jquery-bootswatch
 
