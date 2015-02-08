@@ -48,7 +48,7 @@
 	}
 
 	var themes = {
-		default: 'http://netdna.bootstrapcdn.com/bootstrap/3.1.2/css/bootstrap.min.css',
+		default: 'http://netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css',
 		cerulean: theme_url('cerulean'),
 		cosmo: theme_url('cosmo'),
 		cyborg: theme_url('cyborg'),
