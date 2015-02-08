@@ -44,19 +44,21 @@
 	};
 
 	function theme_url(name) {
-		return 'http://netdna.bootstrapcdn.com/bootswatch/3.1.1/$name/bootstrap.min.css'.replace(/\$name/g, name);
+		return 'http://netdna.bootstrapcdn.com/bootswatch/3.3.2/$name/bootstrap.min.css'.replace(/\$name/g, name);
 	}
 
 	var themes = {
-		default: 'http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css',
-		amelia: theme_url('amelia'),
+		default: 'http://netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css',
 		cerulean: theme_url('cerulean'),
 		cosmo: theme_url('cosmo'),
 		cyborg: theme_url('cyborg'),
+		darkly: theme_url('darkly'),
 		flatly: theme_url('flatly'),
 		journal: theme_url('journal'),
 		lumen: theme_url('lumen'),
+		paper: theme_url('paper'),
 		readable: theme_url('readable'),
+		sandstone: theme_url('sandstone'),
 		simplex: theme_url('simplex'),
 		slate: theme_url('slate'),
 		spacelab: theme_url('spacelab'),
